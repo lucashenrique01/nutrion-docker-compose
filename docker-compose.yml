@@ -14,16 +14,18 @@ services:
     image: lucashenrique01/api-forum:latest
     depends_on:
       - db
+      - mysql_nutrion
     container_name: forum
     hostname: forum
     ports:
       - 8082:8082
   
   api-usuarios:
-  image: lucashenrique01/api-usuarios:latest
-  depends_on:
-    - db
-  container_name: usuarios
-  hostname: usuarios
-  ports:
+    image: lucashenrique01/api-usuarios:latest
+    depends_on:
+      - db
+      - mysql_nutrion
+    container_name: usuarios
+    hostname: usuarios
+    ports:
     - 8080:8080
