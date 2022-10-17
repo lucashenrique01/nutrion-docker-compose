@@ -14,7 +14,6 @@ services:
     image: lucashenrique01/api-forum:latest
     depends_on:
       - db
-      - mysql_nutrion
     container_name: forum
     hostname: forum
     ports:
@@ -24,7 +23,6 @@ services:
     image: lucashenrique01/api-usuarios:latest
     depends_on:
       - db
-      - mysql_nutrion
     container_name: usuarios
     hostname: usuarios
     ports:
