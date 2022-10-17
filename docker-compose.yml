@@ -1,7 +1,6 @@
 version: '3.4'
 
 services:
-
   db:
     image: mysql:8.0
     container_name: mysql_nutrion
@@ -12,20 +11,18 @@ services:
       MYSQL_DATABASE: nutrion
 
   api-forum:
-    build: lucashenrique01/api-forum:latest
+    image: lucashenrique01/api-forum:latest
     depends_on:
       - db
-      - mysql_nutrion
     container_name: forum
     hostname: forum
     ports:
       - 8082:8082
   
   api-usuarios:
-  build: lucashenrique01/api-usuarios:latest
+  image: lucashenrique01/api-usuarios:latest
   depends_on:
     - db
-    - mysql_nutrion
   container_name: usuarios
   hostname: usuarios
   ports:
