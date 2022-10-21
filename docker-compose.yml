@@ -1,4 +1,4 @@
-version: '3.4'
+version: '1.0'
 
 services:
   db:
@@ -27,3 +27,11 @@ services:
     hostname: usuarios
     ports:
     - 8080:8080
+  api-agendamento:
+    image: lucashenrique01/api-agendamento:latest
+    depends_on:
+      - db
+    container_name: agendamento
+    hostname: agendamento
+    ports:
+    - 8081:8081
