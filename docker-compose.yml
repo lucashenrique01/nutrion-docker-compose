@@ -12,6 +12,7 @@ services:
 
   api-forum:
     image: lucashenrique01/api-forum:latest
+    restart: always
     depends_on:
       - db
     container_name: forum
@@ -21,6 +22,7 @@ services:
   
   api-usuarios:
     image: lucashenrique01/api-usuarios:latest
+    restart: always
     depends_on:
       - db
     container_name: usuarios
@@ -29,6 +31,7 @@ services:
     - 8080:8080
   api-agendamento:
     image: lucashenrique01/api-agendamento:latest
+    restart: always
     depends_on:
       - db
     container_name: agendamento
