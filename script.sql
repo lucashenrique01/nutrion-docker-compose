@@ -1,5 +1,3 @@
-create database nutrion;
-
 use nutrion;
 
 INSERT INTO tb_usuarios
